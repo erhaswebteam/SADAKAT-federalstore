@@ -409,4 +409,7 @@ FodyWeavers.xsd
 **/Content/Images/Thumbs/
 **/wwwroot/images/thumbs/
 
+# Plugins Publish sırasında Build Events ile oluşuyor zaten, Repo'ya gitmemeli
+Grand.Web/Plugins/
+
 # ========================= ÖZELLEŞTİRMELER - END =========================
