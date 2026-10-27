@@ -842,8 +842,9 @@ namespace Grand.Services.Catalog
                 if (_commonSettings.UseFullTextSearch)
                 {
                     var ss = GenerateSearchTerm(keywords);
-                    var reg = new BsonRegularExpression(ss, "gi");
+                    var reg = new BsonRegularExpression(ss, "i");
                     filter = filter & (builder.Regex(p => p.Name, reg) | builder.Regex(t => t.ShortDescription, reg) | builder.Where(y => y.Sku.ToLower().Contains(keywords.ToLower())));
+
                 }
                 else
                 {
